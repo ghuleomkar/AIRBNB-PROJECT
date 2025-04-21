@@ -97,7 +97,7 @@ app.use((req,res,next)=>{
 
 
 app.get("/",(req,res)=>{
-    res.render("/views/listings/home");
+    res.render("views/home");
 })
 
 
