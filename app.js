@@ -51,7 +51,7 @@ const store = MongoStore.create({
 });
 
 
-store.on("error",()=>{
+store.on("error",(err)=>{
     console.log("ERROR in MONGO SESSION STORE", err);
 });
 
@@ -96,6 +96,9 @@ app.use((req,res,next)=>{
 });
 
 
+app.get("/",(req,res)=>{
+    res.render("home");
+})
 
 
 app.use("/listings",listingRouter);            //use listings
